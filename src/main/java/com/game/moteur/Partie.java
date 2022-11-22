@@ -9,6 +9,11 @@ public class Partie {
     private static final String NOM_FICHIER_DICTIONNAIRE = "pli07.txt";
     public static final int NOMBRE_ESSAIS_POSSIBLE = 6;
 
+    public static final String INSTRUCTIONS = "Bienvenue dans le jeu du pendu !\n" +
+            "Vous devez deviner un mot en entrant des lettres.\n" +
+            "Vous avez droit à 6 erreurs avant de perdre.\n" +
+            "Bonne chance !";
+
     private final String motATrouver;
 
     private final Session session;

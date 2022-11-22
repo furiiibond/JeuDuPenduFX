@@ -207,5 +207,7 @@ public class JeuPenduController {
     }
 
     public void displayInstructions(ActionEvent actionEvent) {
+        // open a new javaFX windows with texte hello in it
+        Popup.display("Informations", Partie.INSTRUCTIONS);
     }
 }
