@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.game.ihm.JeuPenduController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+        <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;" text="Drag components from Library here…" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Label>
+            <SplitPane dividerPositions="0.4122257053291536" prefHeight="400.0" prefWidth="640.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="454.0" prefWidth="308.0">
+                     <children>
+                        <SplitPane dividerPositions="0.8308080808080808" orientation="VERTICAL" prefHeight="398.0" prefWidth="260.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="132.0" prefWidth="261.0">
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bfa460" height="25.0" layoutX="158.0" layoutY="54.0" stroke="BLACK" strokeType="INSIDE" width="13.0" />
+                                    <Circle fx:id="tete" fill="DODGERBLUE" layoutX="165.0" layoutY="93.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bfa460" height="212.0" layoutX="69.0" layoutY="54.0" stroke="BLACK" strokeType="INSIDE" width="13.0" />
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bfa460" height="10.0" layoutX="34.0" layoutY="261.0" stroke="BLACK" strokeType="INSIDE" width="80.0" />
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bfa460" height="10.0" layoutX="45.0" layoutY="49.0" stroke="BLACK" strokeType="INSIDE" width="148.0" />
+                                    <Rectangle fx:id="corps" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="54.0" layoutX="151.0" layoutY="109.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="28.0" />
+                                    <Rectangle fx:id="bras1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="10.0" layoutX="107.0" layoutY="109.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="44.0" />
+                                    <Rectangle fx:id="bras2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="10.0" layoutX="179.0" layoutY="109.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="44.0" />
+                                    <Rectangle fx:id="jambe1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="54.0" layoutX="152.0" layoutY="163.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="13.0" />
+                                    <Rectangle fx:id="jambe2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="54.0" layoutX="165.0" layoutY="163.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="13.0" />
+                                 </children></AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="60.0" prefWidth="258.0">
+                                 <children>
+                                    <HBox alignment="CENTER" layoutY="2.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="62.0" prefWidth="258.0">
+                                       <children>
+                                          <Button fx:id="initGame" contentDisplay="CENTER" mnemonicParsing="false" onAction="#newGame" text="Débuter le jeu" />
+                                          <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                                          <Button fx:id="astuce" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#displayALetter" text="Astuce" />
+                                          <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                                          <Button id="instructions" mnemonicParsing="false" onAction="#displayInstructions" text="Instructions" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <VBox layoutX="1.0" layoutY="1.0" prefHeight="398.0" prefWidth="372.0">
+                           <children>
+                              <TitledPane animated="false" collapsible="false" text="Nom du Joueur :">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TextField fx:id="playerName" prefHeight="35.0" prefWidth="365.0" promptText="Entrez votre nom" />
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </TitledPane>
+                              <TitledPane animated="false" collapsible="false" text="Score :">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TextField fx:id="score" editable="false" layoutX="-1.0" layoutY="1.0" prefHeight="35.0" prefWidth="372.0" text="0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" collapsible="false" prefHeight="418.0" prefWidth="372.0" text="Trouver le mot :">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="370.0">
+                                       <children>
+                                          <TextField fx:id="motATrouver" editable="false" layoutX="69.0" layoutY="8.0" prefHeight="27.0" prefWidth="233.0" />
+                                          <GridPane fx:id="keyboard" layoutY="71.0" prefHeight="177.0" prefWidth="372.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Button fx:id="A" mnemonicParsing="false" text="a" GridPane.halignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button id="B" mnemonicParsing="false" text="b" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                                <Button id="C" mnemonicParsing="false" text="c" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                                                <Button id="D" mnemonicParsing="false" text="d" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
+                                                <Button id="E" mnemonicParsing="false" text="e" GridPane.columnIndex="4" GridPane.halignment="CENTER" />
+                                                <Button id="F" mnemonicParsing="false" text="f" GridPane.columnIndex="5" GridPane.halignment="CENTER" />
+                                                <Button id="G" mnemonicParsing="false" text="g" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                                <Button id="H" mnemonicParsing="false" text="h" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                                <Button id="I" mnemonicParsing="false" text="i" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                                <Button id="J" mnemonicParsing="false" text="j" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                                <Button id="K" mnemonicParsing="false" text="k" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                                <Button id="L" mnemonicParsing="false" text="l" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                                <Button id="M" mnemonicParsing="false" text="m" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                                <Button id="N" mnemonicParsing="false" text="n" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                                <Button id="O" mnemonicParsing="false" text="o" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                                <Button id="P" mnemonicParsing="false" text="p" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                                <Button id="Q" mnemonicParsing="false" text="q" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                                <Button id="R" mnemonicParsing="false" text="r" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                                <Button id="S" mnemonicParsing="false" text="s" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                                <Button id="T" mnemonicParsing="false" text="t" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                                <Button id="U" mnemonicParsing="false" text="u" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                                <Button id="V" mnemonicParsing="false" text="v" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                                <Button id="W" mnemonicParsing="false" text="w" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                                <Button id="X" mnemonicParsing="false" text="x" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                                <Button id="Y" mnemonicParsing="false" text="y" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                                                <Button id="Z" mnemonicParsing="false" text="z" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
