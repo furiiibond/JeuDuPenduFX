@@ -20,7 +20,7 @@ public class Popup {
         Label label1= new Label(text);
 
 
-        Button button1= new Button("Close");
+        Button button1= new Button("Fermer");
 
 
         button1.setOnAction(e -> popupwindow.close());

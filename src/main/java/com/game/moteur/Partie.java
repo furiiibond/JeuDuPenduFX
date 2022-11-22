@@ -105,6 +105,10 @@ public class Partie {
         }
     }
 
+    /**
+     * Le joueur utilise son jocker pour trouver une lettre
+     *
+     */
     public String displayALetter() {
         if (jocker) {
             // on affiche une lettre au hasard
